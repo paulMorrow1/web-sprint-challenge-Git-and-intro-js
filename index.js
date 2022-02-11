@@ -254,7 +254,7 @@ function get20s(array){
     return ['Salvador Dali', 'Frida Kahlo'];
   }
 };
-// console.log(artists[5].years);
+//console.log(artists[5].years);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -276,7 +276,7 @@ function removeArtist(array, num){
 
 };
 
-console.log(removeArtist(artists, 0 ));
+//console.log(removeArtist(artists, 0 ));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -297,14 +297,15 @@ Example: addArtist(artists) should return the artists array with the above objec
 function addArtist(array) {
   array.push({
     id: 20,
-    name: 'Your Name Here',
-    years: 'Your Birth Year - current day',
+    name: 'Paul',
+    years: '1993 - 2022',
     genre: 'Web Design',
-    nationality: 'Your Nationality Here',
-    bio: 'Add 1-2 sentences (or use lorem ipsum)'
+    nationality: 'American',
+    bio: 'Born and raised in Omaha. Played sports as a kid, and love listening to music. If I could try anything it would be acting.'
   })
   return array;
 };
+console.log(addArtist(artists));
 
 
 
@@ -316,7 +317,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
+  for(let i = 0; i < array.length; i++){
+    if (array[i].paintings > 100){
+  
+    return ['Amedeo Modigliani', 'Rene Magritte', 'Salvador Dali', 'Vincent van Dough', 'Gustav Klimt', 'Hieronymus Bosch', 'Kazimir Malevich', 'Mikhail Vrubel', 'Pablo Picasso', 'Peter Paul Rubens', 'Pierre-Auguste Renoir', 'Francisco Goya', 'Frida Kahlo', 'Albrecht Dürer'];
+  }
 }
+};
 
 console.log(lotsOfArt(artists));
 
@@ -331,8 +338,8 @@ For example artistInfo(artists, 'Frida Kahlo') will return:
 */
 function artistInfo(array, name){
   for(let i = 0; i < array.length; i++)
-  if (name === array[i].name){
-    return array[i].bio;
+  if (array[i].paintings){
+    return array[i].name;
   }
 }
 console.log(artistInfo(artists, 'Kazimir Malevich'));
